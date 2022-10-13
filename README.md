@@ -2,9 +2,9 @@
 
 [![Pub](https://img.shields.io/pub/v/custom_pin_auth.svg)](https://pub.dartlang.org/packages/custom_pin_auth) 
 
-# Flutter - Passcode Lock Screen
+# Flutter - Pin Lock Screen
 
-A Flutter package for iOS and Android for showing passcode input screen, similar to Native iOS.
+A Flutter package for iOS and Android for showing pin input screen, similar to Native iOS.
 
 
 ## Relase notes:
