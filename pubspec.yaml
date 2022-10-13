@@ -1,7 +1,9 @@
 name: custom_pin_auth
 description: A new Flutter project.
-version: 0.0.1
-homepage:
+version: 1.0.1
+homepage: https://github.com/testersingh021/custom_pin_auth
+repository: https://github.com/testersingh021/custom_pin_auth
+issue_tracker: https://github.com/testersingh021/custom_pin_auth/issues
 
 environment:
   sdk: '>=2.18.2 <3.0.0'

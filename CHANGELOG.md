@@ -1,3 +1,4 @@
-## 0.0.1
+## 1.0.1
 
-* TODO: Describe initial release.
+* Basic implementation of a widget.
+- You could show a screen, enter pin and validate it.
