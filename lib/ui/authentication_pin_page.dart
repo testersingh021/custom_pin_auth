@@ -1,4 +1,3 @@
-
 import 'package:custom_pin_auth/ui/widget/button_of_numpad.dart';
 import 'package:custom_pin_auth/ui/widget/pin_sphere.dart';
 import 'package:flutter/material.dart';
@@ -38,10 +37,15 @@ class AuthenticationPIN extends StatelessWidget {
                   ),
                 );
                 Future.delayed(
-                  const Duration(seconds: 2),
-                  () => Navigator.pop(
-                      context),///Navigator.pushAndRemoveUntil(context, Home.route(), (_) => false),
-                );
+                    const Duration(seconds: 2),
+                    () => {
+                          Navigator.pop(context),
+                          if (Navigator.canPop(context))
+                            Navigator.pop(context, true),
+                        }
+
+                    ///Navigator.pushAndRemoveUntil(context, Home.route(), (_) => false),
+                    );
               } else if (state.pinStatus == AuthenticationPINStatus.unequals) {
                 showDialog(
                     context: context,
@@ -52,6 +56,15 @@ class AuthenticationPIN extends StatelessWidget {
                           title: Text(authenticationFailed),
                           actionsAlignment: MainAxisAlignment.center,
                         ));
+                Future.delayed(
+                    const Duration(seconds: 2),
+                    () => {
+                          Navigator.pop(context),
+                          // if (Navigator.canPop(context)) Navigator.pop(context),
+                        }
+
+                    ///Navigator.pushAndRemoveUntil(context, Home.route(), (_) => false),
+                    );
               }
             },
             child: Column(

@@ -51,7 +51,11 @@ class CreatePIN extends StatelessWidget {
                           actionsAlignment: MainAxisAlignment.center,
                           actions: [
                             TextButton(
-                              onPressed: () => Navigator.pop(context),
+                              onPressed: () => {
+                                Navigator.pop(context,true),
+                                if (Navigator.canPop(context))
+                                  Navigator.pop(context, true),
+                              },
                               child: const Text(ok),
                             )
                           ],
@@ -67,9 +71,11 @@ class CreatePIN extends StatelessWidget {
                           actionsAlignment: MainAxisAlignment.center,
                           actions: [
                             TextButton(
-                              onPressed: () =>
-                                  BlocProvider.of<CreatePINBloc>(context)
-                                      .add(const CreateNullPINEvent()),
+                              onPressed: () => {
+                                Navigator.pop(context),
+                                BlocProvider.of<CreatePINBloc>(context)
+                                    .add(const CreateNullPINEvent()),
+                              },
                               child: const Text(ok),
                             )
                           ],

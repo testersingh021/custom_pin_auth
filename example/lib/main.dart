@@ -1,3 +1,4 @@
+import 'package:custom_pin_auth_example/home_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -52,15 +53,25 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+        // theme: ThemeData(
+        //   appBarTheme: AppBarTheme(
+        //       elevation: 0,
+        //       centerTitle: true,
+        //       color: Theme.of(context).scaffoldBackgroundColor,
+        //       iconTheme: const IconThemeData(
+        //         color: Colors.black,
+        //       )
+        //   ),
+        // ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
+        body: const HomeScreen()
       ),
     );
+
   }
 }
