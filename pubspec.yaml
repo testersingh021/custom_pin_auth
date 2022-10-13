@@ -1,5 +1,5 @@
 name: custom_pin_auth
-description: A new Flutter project.
+description: A platform agnostic Flutter package for showing pin input screen, similar to Native iOS. Screen customizable with a colors, sizes, fonts etc.
 version: 1.0.1
 homepage: https://github.com/testersingh021/custom_pin_auth
 repository: https://github.com/testersingh021/custom_pin_auth
